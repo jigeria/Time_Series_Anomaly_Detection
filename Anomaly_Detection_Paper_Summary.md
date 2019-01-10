@@ -1,4 +1,4 @@
-# Time Series Anomaly Detection 
+# Time Series Anomaly Detection - Anomaly Detection Paper Summary
 
 * 작성자 : 박상민 - (주)인스페이스 미래기술실 연구원 
 * 일시 : 2018.01.07
@@ -13,7 +13,7 @@
 * 이번글의 중점은 조사했던 11개 논문을 정리하는 것 입니다. 논문을 조사하고 읽은 목적은 다른 곳에서는 어떤식으로 데이터를 구축하는지, 어떤 문제를 해결하려고 하였는지, 모델 성능평가는 어떻게 하는지, 어떤 방법으로 연구하는지 등의 흐름을 얻기 위해 간단하게 조사한 것 입니다. 논문 중 꼭 자세히 읽어야 하는  부분은 좀 더 자세히 읽었습니다.
     
 * 아래는 제가 읽은 11개 논문중 10개에 대해서 간단하게 분류한 것 입니다.
-    ![Alt text](https://github.com/jigeria/AnomalyDetection/blob/master/picture/paper_1.png "10개 논문 분류")
+    ![Alt text](./picture/paper_1.png "10개 논문 분류")
 
     * 위 사진을 보면 어떤 논문이 어떤 모델을 썼는지, 시계열 데이터 사용 유무 등을 한번에 볼 수 있습니다. 예를들어 5번 논문의 경우 시게열 데이터를 사용했고, SVM 모델을 사용했습니다. 원이 겹쳐져있는 경우는 두 개를 같이 사용했다는 뜻 입니다. 즉, 5번 논문은 SVM모델과 DNN + LSTM를 동시에 사용한 모델이라는 뜻 입니다.
 
@@ -45,7 +45,7 @@
     * 위와 같은 구조적, 하드웨어적 이상들을 감지하는 시스템이 없다면 로봇이 자주 고장나게 되고, 수리비용이 높아지며, 사용자들이 더 이상 사용하지 않을 수 있는 문제점이 있다고 합니다.
     * 비정상적인 이상 상황들을 검출하고, 인식한다면 미리 예방이 가능하다고 논문에서는 말하고 있습니다.
     * LSTM-VAE(LSTM based variational autoencoder)를 이용해 Anomaly Score를 계산하였습니다. 
-    ![Alt text](https://github.com/jigeria/AnomalyDetection/blob/master/picture/paper_3.png "LSTM-VAE 구조")
+    ![Alt text](./picture/paper_3.png "LSTM-VAE 구조")
     * Anomaly Score가 Threshold를 넘어서게 되면 이상이라고 판단을 합니다.
     * 논문에서는 기존의 여러 방법들을 적용해 보았지만 LSTM-VAE모델의 성능이 가장 좋았다고 합니다.
 
@@ -65,7 +65,7 @@
     * 본 논문에서는 CPS상의 이상을 감지하는 방법에 대해서 두 가지의 비지도학습 방안을 제안하였고, CPS시스템에 적용하였습니다.
     * 두 가지 방안은 LSTM layer가 있는 DNN 네트워크와 SVM을 사용하는 방안입니다.
     * 실제로 적용해보니, DNN 네트워크가 Precision과 F-score가 더 높았고, SVM이 Recall이 더 높았다고 말말합니다.
-    ![Alt text](https://github.com/jigeria/AnomalyDetection/blob/master/picture/paper_5.png "모델 성능지표 비교")
+    ![Alt text](./picture/paper_5.png "모델 성능지표 비교")
     * 하지만 DNN네트워크는 학습에 2주가 걸렸고, SVM은 30분이 걸렸다고 설명합니다.
     * 두 가지 방법모두 센서 값의 점진적인 변화를 탐지 못하는 한계점도 있었다고 논문에서는 밝힙니다.
 
@@ -77,7 +77,7 @@
     * 본 논문에서는 stacked LSTM 네트워크를 이용해 window를 정해주거나 전처리 없이 이상감지를 할 수 있음을 보여주었습니다.
     * 데이터는 ECG, 우주 왕복선, 전력 수요, 엔진 센서 데이터 셋을 이용하였고, normal 데이터로 훈련을 하였다고 말하고 있습니다.
     * Stacked 된 LSTM 네트워크는 좋은 성능을 보여주었고, RNN보다 LSTM 네트워크가 성능이 더 좋았다고 밝히고 있습니다.          
-    ![Alt text](https://github.com/jigeria/AnomalyDetection/blob/master/picture/paper_6.PNG "모델 성능지표")
+    ![Alt text](./picture/paper_6.PNG "모델 성능지표")
 
 7. Anomaly Detection with Generative Adversarial Networks for Multivariate Time Series [7](https://arxiv.org/pdf/1709.05342.pdf)
 
@@ -88,7 +88,7 @@
     * GAN모델 내에있는 LSTM-RNN이 다변수 시계열 데이터의 분포를 capture합니다.
     * 각 센서와 액추에이터 시계열 데이터를 독립적으로 처리하는 대신, 시계열 데이터를 동시에 모델링하여 잠재적인 상호작용을 고려한다고 설명합니다.
     * Secure Water Treatment Testbed(SWaT) 데이터 셋을 사용해 테스트를 하였으며, 다른 비지도학습 이상감지 기법보다 성능이 좋았다고 말하고 있습니다.
-    ![Alt text](https://github.com/jigeria/AnomalyDetection/blob/master/picture/paper_7.png "모델 구조 및 출력")
+    ![Alt text](./picture/paper_7.png "모델 구조 및 출력")
 
 8. LSTM-based Encoder-Decoder for Multi-sensor Anomaly Detection [8](https://arxiv.org/pdf/1607.00148.pdf)
 
@@ -109,7 +109,7 @@
     * 모든 모델의 결과를 분석해 보니 논문에서 사용한 이상탐지 규칙이 효과적이었다고 밝히고 있습니다.
     * 논문에서는 모델과 규칙들을 여러가지 조합으로 실험을 진행하였는데, 두 개의 규칙의 교차점을 사용하면 거의 모든 모델에서 이상을 찾아낼 수 있었다고 합니다.
     * 통계적인 베이스가 있는 이상감지 규칙과, 사용자가 반복적으로 false positive를 수동으로 제거할 수 있도록 쉽게 수정할 수 있는 규칙은 이상징후를 탐지할 수 있는 매우 강력한 방법이라고 말하고 있습니다.
-    ![Alt text](https://github.com/jigeria/AnomalyDetection/blob/master/picture/paper_9.png "모델 성능 지표 비교")
+    ![Alt text](./picture/paper_9.png "모델 성능 지표 비교")
 
 10. Detecting Spacecraft Anomalies Using Nonparametric Dynamic Thresholding [10](https://arxiv.org/pdf/1802.04431.pdf)
 
@@ -161,32 +161,32 @@
         * LSTM네트워크를 이용해 정상 telemetry sequences와 command를 예측하는 것을 학습하고, unsupervised thresholding을 사용해 데이터를 자동 평가하고, 이상을 감지한다.
 
     * LSTM 모델 구조를 보여주는 사진입니다. 모델은 normal(정상)데이터로 학습을 진행합니다.
-    ![Alt text](https://github.com/jigeria/AnomalyDetection/blob/master/picture/paper_10_1.png "LSTM모델 구조")
+    ![Alt text](./picture/paper_10_1.png "LSTM모델 구조")
 
     * 모델의 입력, 출력(예측), error setting의 시퀀스를 보여주는 사진입니다. error를 이용해 threshold를 설정하고, 이상감지를 진행합니다.
-    ![Alt text](https://github.com/jigeria/AnomalyDetection/blob/master/picture/paper_10_2.png "모델 Predict and Error setting")
+    ![Alt text](./picture/paper_10_2.png "모델 Predict and Error setting")
 
     * Non-Parametrict Thresholding 수식입니다. Error 값에 따라 threshold가 유동적으로 바뀌게 됩니다. Unsupervised thresholding 기법이라고 설명하고 있습니다.
-    ![Alt text](https://github.com/jigeria/AnomalyDetection/blob/master/picture/paper_10_3.png "Non-Parametrict Thresholding")
+    ![Alt text](./picture/paper_10_3.png "Non-Parametrict Thresholding")
 
     * 다양한 Threshold 기법을 적용한 모델 성능지표입니다. Non-Parametric 기법과 Pruning(가지치기)기법을 사용하였을 때 가장 좋은 성능이 나왔습니다.
-    ![Alt text](https://github.com/jigeria/AnomalyDetection/blob/master/picture/paper_10_4.png "Performance comparison of each thresholding method")
+    ![Alt text](./picture/paper_10_4.png "Performance comparison of each thresholding method")
 
     * 실제 저자가 사용한 데이터 셋 입니다. Github에 올려져 있습니다. 학습 셋과 테스트 셋이 나뉘어져 있습니다. 학습셋은 정상 데이터, 테스트 셋은 정상 + 비정상데이터(라벨링 된)로 구성되어 있습니다.
-    ![Alt text](https://github.com/jigeria/AnomalyDetection/blob/master/picture/paper_10_5.png "Dataset")
+    ![Alt text](./picture/paper_10_5.png "Dataset")
 
     * 테스트 셋은 라벨링 되어 있습니다(labeled_anomalies.csv 참고). 이상구간 인덱스와, 이상의 종류, 데이터 셋 이름 등의 대한 정보가 csv파일형태로 구성되어 있습니다.
-    ![Alt text](https://github.com/jigeria/AnomalyDetection/blob/master/picture/paper_10_6.png "Labeled anomalies data file")
+    ![Alt text](./picture/paper_10_6.png "Labeled anomalies data file")
 
     * 'labeled_anomalies.csv' 파일 상세설명 입니다. 이상의 종류(point, contextual)까지 라벨링 하였습니다. 
-    ![Alt text](https://github.com/jigeria/AnomalyDetection/blob/master/picture/paper_10_8.png "Labeled Dataset")
+    ![Alt text](./picture/paper_10_8.png "Labeled Dataset")
 
     * 아래는 테스트 데이터 셋을 이용한 모델 성능평가 담긴 사진입니다.
-    ![Alt text](https://github.com/jigeria/AnomalyDetection/blob/master/picture/paper_10_7.png "Model Test")
+    ![Alt text](./picture/paper_10_7.png "Model Test")
 
 11. A Data-Driven Health Monitoring Method for Satellite Housekeeping Data Based on Probabilistic Clustering and Dimensionality Reduction [11](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7859276)
 
-    ![Alt text](https://github.com/jigeria/AnomalyDetection/blob/master/picture/paper_11_1.png "Paper")
+    ![Alt text](./picture/paper_11_1.png "Paper")
     * 'A Data-Driven Health Monitoring Method for Satellite Housekeeping Data Based on Probabilistic Clustering and Dimensionality Reduction' 논문입니다.
     * JAXA와 도쿄대학교에서 작성한 논문입니다. 인공위성 Telemetry 데이터를 사용하였습니다.
     * 위성 Telemetry의 특징 분석, 전처리 기법등을 위주로 읽어보았습니다.
@@ -251,11 +251,11 @@
             * 위성 Telemetry 데이터를 머신러닝 모델에 적용할 때, 누락된 데이터를 처리할 수 있도록 수정하거나, 누락된 요소들을 미리 복구하기위한 전처리를 해주고, 학습 알고리즘에 제공해주는 작업이 필요하다.
             
             * 아래사진은 논문에서 missing data의 missing 여부를 시각화 한 것입니다. 흰색은 누락된 부분이고, 검은색은 누락되지 않은 부분입니다.
-            ![Alt text](https://github.com/jigeria/AnomalyDetection/blob/master/picture/paper_11_2.png "Missing Data")
+            ![Alt text](./picture/paper_11_2.png "Missing Data")
 
         * __Trivial Outliers (사소한 이상치들)__
             * 위성 Telemetry 데이터에서는 가끔씩 굉장히 큰 이상데이터들이 데이터 변환 또는 전송오류로 생길 수도 있습니다.
-            ![Alt text](https://github.com/jigeria/AnomalyDetection/blob/master/picture/paper_11_3.png "Trivial Outliers")
+            ![Alt text](./picture/paper_11_3.png "Trivial Outliers")
 
             * 위성 Telemetry 데이터에서는 가끔씩 굉장히 큰 이상데이터들이 데이터 변환 또는 전송오류로 생길 수도 있다는 것 이다.
             * 중요한 점은 이러한 오류들(point)이 오직 데이터 변환 또는 전송 오류로만 인해서 발생하고, 심각한 이상징후를 나타내지 않는 것 이다.
@@ -278,7 +278,7 @@
                 * 그 값은 비슷한 시간에 있는 값들과 매우 다르다는 것
 
             * Trivial outliers를 탐지하고, 제거하기 위한 수식입니다. 상한선과 하한선을 설정하고, 상하한선을 넘을 경우 제거합니다.
-            ![Alt text](https://github.com/jigeria/AnomalyDetection/blob/master/picture/paper_11_4.png "Trivial Outliers")
+            ![Alt text](./picture/paper_11_4.png "Trivial Outliers")
 
         * __Missing value completion__
             * 위성의 Telemetry 데이터는 변수들마다 샘플링 주기와 타이밍이 다르기 때문에 구조적으로 데이터 누락이 발생할 수 있다,
