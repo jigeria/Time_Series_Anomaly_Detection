@@ -298,16 +298,37 @@
         * Anomaly Score는 내가 뽑은 데이터 샘플의 희귀한 정도를 수치화시켜 나타낸 것 입니다.(희귀할수록 score는 높아지게 됩니다.)  
         ![Alt text](./picture/paper_11_5.PNG "Anomaly Score")
 
-        * Anomaly Score는 Gaussian Mixture Model를 사용하였습니다. Guassain Mixture Model의 대한 설명을 잠깐 드리겠습니다.
-        GMM(Gaussian Mixture Model)은 데이터가 K개의 정규분포로부터 생성되었다고 보는 모델입니다.  
-         
-        ![Alt text](./picture/paper_11_6.png "Anomaly Score")  
-        위 사진의 분포를 더 자세히보면 아래 사진과 같은 3개의 정규분포로 되어있는 걸 볼 수 있습니다.  
-        ![Alt text](./picture/paper_11_7.png "Anomaly Score")  
-        위 사진과 같이 GMM은 K개의 정규분포로 데이터가 생성되었다고 보는 모델입니다.  
-          
-        아래사진처럼 2차원과 3차원에서도 가능합니다.  
-        ![Alt text](./picture/paper_11_7.png "Anomaly Score")  
+        * Anomaly Score는 Gaussian Mixture Model를 사용하였습니다. 간단하게 방식에 대해 설명드리기 전에 Guassain Mixture Model의 대한 설명을 잠깐 드리겠습니다.
+            GMM(Gaussian Mixture Model)은 데이터가 K개의 정규분포로부터 생성되었다고 보는 모델입니다.  
+            
+            ![Alt text](./picture/paper_11_6.png)  
+            위 사진의 분포를 더 자세히보면 아래 사진과 같은 3개의 정규분포로 되어있는 걸 볼 수 있습니다.  
+            ![Alt text](./picture/paper_11_7.png)  
+            위 사진과 같이 GMM은 K개의 정규분포로 데이터가 생성되었다고 보는 모델입니다.  
+
+            아래사진처럼 2차원과 3차원에서도 가능합니다.  
+            ![Alt text](./picture/paper_11_8.png)    
+
+            아래와 같이 C1 ~ C6까지 총 6개의 클러스터링 된 굉장히 이상적인 분포가 있다고 생각을 해보겠습니다.  
+            ![Alt text](./picture/paper_11_12.png)  
+
+            각 클러스터의 데이터 샘플들의 개수는 다음과 같습니다.
+            ![Alt text](./picture/paper_11_13.png)  
+
+            각 클러스터들의 데이터 샘플 개수가 위의 사진과 같다면, 전체 데이터 중 하나의 데이터를 뽑았을 때 그 데이터의 클러스터를 뽑을 확률을 구해야합니다.  
+            ![Alt text](./picture/paper_11_14.png)  
+            만약 내가 C1에 속한 데이터를 하나 뽑았다면, 확률 p는 1/5일 것 입니다.  C6에 속한 데이터를 하나 뽑았다면, p는 1/40일 것 입니다. 즉 클러스터에 속한 데이터 샘플들의 개수가 적을수록 p는 낮아질 것 입니다.  
+            아래 사진을 참고하시면 한눈에 들어올 수 있을 것 같습니다.  
+            ![Alt text](./picture/paper_11_9.png)  
+
+            아까 구한 p의 -log를 계산합니다. -log를 씌우게 되면 값이 p가 1에 가까울수록, -log(p)는 0에 수렴합니다. 반대로 p가 0에 가까울수록, -log(p)는 무한대로 발산하게 됩니다.
+            ![Alt text](./picture/paper_11_10.png)  
+
+            아래 사진과 같이 p확률을 구하고, -log(p)를 계산하면 우리가 원하는 anomaly score가 나오게 됩니다. p가 낮을 수록, score는 높아지게 되는 것이고, 이는 내가 뽑은 하나의 데이터가 속한 클러스터에서 그 클러스터에 속한 데이터 개수가 적을수록, p는 높아질 것이고, score도 높아진다는 것 입니다.  
+            ![Alt text](./picture/paper_11_11.png)      
+
+
+
 
 
 
