@@ -292,14 +292,35 @@
                 * Ex)’DIS’ / ‘ENA’ Telemetry가 각각 0.8, 0.2의 확률이라면 DIS는 1이고, ENA는 0이다.
 
 * 참고자료
-    * [1] Applications of Deep Learning Neural Networks to Satellite Telemetry Monitoring - https://elib.dlr.de/121211/1/6.2018-2558.pdf
-    * [2] Performance assessment of NOSTRADAMUS & other machine learning-based telemetry monitoring systems on a spacecraft anomalies database - https://arc.aiaa.org/doi/pdf/10.2514/6.2018-2559
-    * [3] A Multimodal Anomaly Detector for Robot-Assisted Feeding Using an LSTM-based Variational Autoencoder - https://arxiv.org/pdf/1711.00614.pdf
-    * [4] Deep learning for anomaly detection in multivariate time series data - https://users.informatik.haw-hamburg.de/~ubicomp/arbeiten/master/assendorp.pdf 
-    * [5] Anomaly Detection for a Water Treatment System Using Unsupervised Machine Learning - https://arxiv.org/pdf/1709.05342.pdf
-    * [6] Long Short Term Memory Networks for Anomaly Detection in Time Series - https://www.elen.ucl.ac.be/Proceedings/esann/esannpdf/es2015-56.pdf
-    * [7] Anomaly Detection with Generative Adversarial Networks for Multivariate Time Series - https://arxiv.org/pdf/1709.05342.pdf
-    * [8] LSTM-based Encoder-Decoder for Multi-sensor Anomaly Detection - https://arxiv.org/pdf/1607.00148.pdf 
-    * [9] Time Series Anomaly Detection - https://arxiv.org/ftp/arxiv/papers/1708/1708.03665.pdf 
-    * [10] Detecting Spacecraft Anomalies Using Nonparametric Dynamic Thresholding - https://arxiv.org/pdf/1802.04431.pdf
-    * [11] A Data-Driven Health Monitoring Method for Satellite Housekeeping Data Based on Probabilistic Clustering and Dimensionality Reduction - https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7859276
+    * [1] Applications of Deep Learning Neural Networks to Satellite Telemetry Monitoring  
+    https://elib.dlr.de/121211/1/6.2018-2558.pdf  
+
+    * [2] Performance assessment of NOSTRADAMUS & other machine learning-based telemetry monitoring systems on a spacecraft anomalies database   
+    https://arc.aiaa.org/doi/pdf/10.2514/6.2018-2559
+
+    * [3] A Multimodal Anomaly Detector for Robot-Assisted Feeding Using an LSTM-based Variational Autoencoder  
+    https://arxiv.org/pdf/1711.00614.pdf
+
+    * [4] Deep learning for anomaly detection in multivariate time series data  
+    https://users.informatik.haw-hamburg.de/~ubicomp/arbeiten/master/assendorp.pdf 
+    
+    * [5] Anomaly Detection for a Water Treatment System Using Unsupervised Machine Learning   
+    https://arxiv.org/pdf/1709.05342.pdf
+
+    * [6] Long Short Term Memory Networks for Anomaly Detection in Time Series  
+    https://www.elen.ucl.ac.be/Proceedings/esann/esannpdf/es2015-56.pdf
+
+    * [7] Anomaly Detection with Generative Adversarial Networks for Multivariate Time Series -  
+    https://arxiv.org/pdf/1709.05342.pdf
+
+    * [8] LSTM-based Encoder-Decoder for Multi-sensor Anomaly Detection 
+    https://arxiv.org/pdf/1607.00148.pdf 
+
+    * [9] Time Series Anomaly Detection 
+    https://arxiv.org/ftp/arxiv/papers/1708/1708.03665.pdf 
+
+    * [10] Detecting Spacecraft Anomalies Using Nonparametric Dynamic Thresholding  
+    https://arxiv.org/pdf/1802.04431.pdf
+
+    * [11] A Data-Driven Health Monitoring Method for Satellite Housekeeping Data Based on Probabilistic Clustering and Dimensionality Reduction  
+    https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7859276
