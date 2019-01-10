@@ -19,7 +19,8 @@
 
 ### __논문 요약 정리__
 
-1. Applications of Deep Learning Neural Networks to Satellite Telemetry Monitoring [1]
+1. Applications of Deep Learning Neural Networks to Satellite Telemetry Monitoring [1](https://elib.dlr.de/121211/1/6.2018-2558.pdf)
+
     * 기존의 자동원격모니터링 시스템은 이상위험을 감지하지 못한다고 저자는 말합니다.
     * 그래서 본 논문에서는 새로운 3개지의 Application을 제안합니다.
     * Autoencoder(오토인코더)
@@ -29,7 +30,7 @@
         * 예측 모델을 이용하여 4시간 30분 후의 Telemetry value를 예측 -> 이상 예측
     * False Positive를 줄이고, 다양한 형태의 이상을 감지하였다고 논문에서는 밝힙니다.
 
-2. Performance assessment of NOSTRADAMUS & other machine learning-based telemetry monitoring systems on a spacecraft anomalies database [2]
+2. Performance assessment of NOSTRADAMUS & other machine learning-based telemetry monitoring systems on a spacecraft anomalies database [2](https://arc.aiaa.org/doi/pdf/10.2514/6.2018-2559)
 
     * 최근 몇년동안 머신러닝을 이용한 새로운 탐지방법들이 제안되었다고 말하고 있습니다.
     * 저자는 여러개의 이상감지 방법들을 정량적으로 비교할 때 얻은 평가방법론과 결과를 제시하고자 하였습니다.
@@ -38,7 +39,7 @@
     * 머신러닝에서 가장 중요한 작업은 데이터의 이해, 문제정의, 최적의 방법찾기라고 논문에서는 말합니다.
     * 논문에서는 머신러닝 모델의 성능만 중요한게 아니라, 결과의 해석 가능성, 처리시간(계산 시간), 새로운 데이터에 시스템 업데이트 유무라고 밝힙니다.
 
-3. A Multimodal Anomaly Detector for Robot-Assisted Feeding Using an LSTM-based Variational Autoencoder [3]
+3. A Multimodal Anomaly Detector for Robot-Assisted Feeding Using an LSTM-based Variational Autoencoder [3](https://arxiv.org/pdf/1711.00614.pdf)
 
     * 본 논문의 동기는 밥을 먹는데 도와주는 로봇이 구조적, 하드웨어적 문제로 종종 오류가 발생해서 발생한 오류(이상)들을 감지하는 시스템을 개발하는 것이었습니다.
     * 위와 같은 구조적, 하드웨어적 이상들을 감지하는 시스템이 없다면 로봇이 자주 고장나게 되고, 수리비용이 높아지며, 사용자들이 더 이상 사용하지 않을 수 있는 문제점이 있다고 합니다.
@@ -48,7 +49,7 @@
     * Anomaly Score가 Threshold를 넘어서게 되면 이상이라고 판단을 합니다.
     * 논문에서는 기존의 여러 방법들을 적용해 보았지만 LSTM-VAE모델의 성능이 가장 좋았다고 합니다.
 
-4. Deep learning for anomaly detection in multivariate time series data [4]
+4. Deep learning for anomaly detection in multivariate time series data [4](https://users.informatik.haw-hamburg.de/~ubicomp/arbeiten/master/assendorp.pdf)
 
     * 본 글은 자신들이 연구한 연구내용만 있는 것이 아니라, 머신러닝/딥러닝 기반의 다양한 이상감지 기법들의 내용이 포함되어 있습니다. 꼭 읽어보시면 좋을 것 같습니다.
     * 기계 장치들에서 비정상적인 활동을 감지하는 것은 기계 부품에 손상을 줄 수 있는 고장을 방지하는 중요한 작업이라고 합니다.
@@ -57,7 +58,7 @@
     * 딥러닝을 적용하게되면, 도메인 전문가가 하던 feature 엔지니어링 작업을 최소한으로 줄일 수 있기 때문에 많은 비용을 줄일 수 있다고 합니다.
     * 본 글에서는 세탁기의 다변수 + 시계열 데이터를 사용하여 Autoencoder-base와 GAN-base의 이상감지를 비교하였습니다.
 
-5. Anomaly Detection for a Water Treatment System Using Unsupervised Machine Learning [5]
+5. Anomaly Detection for a Water Treatment System Using Unsupervised Machine Learning [5](https://arxiv.org/pdf/1709.05342.pdf)
 
     * CPS(Cyber-Physical System)는 물리적 프로세서와 상호작용하는 컴퓨팅 요소로 구성된 복잡한 시스템입니다.
     * CPS에서는 제어요소, 네트워크 또는 물리적 공격으로 이상현상이 일어날 수 있다고 논문에서는 말합니다.
@@ -68,7 +69,7 @@
     * 하지만 DNN네트워크는 학습에 2주가 걸렸고, SVM은 30분이 걸렸다고 설명합니다.
     * 두 가지 방법모두 센서 값의 점진적인 변화를 탐지 못하는 한계점도 있었다고 논문에서는 밝힙니다.
 
-6. Long Short Term Memory Networks for Anomaly Detection in Time Series [6]
+6. Long Short Term Memory Networks for Anomaly Detection in Time Series [6](https://www.elen.ucl.ac.be/Proceedings/esann/esannpdf/es2015-56.pdf)
 
     * 기존의 모니터링 방식은 통계적 방식을 이용하지만, time window 매개변수를 미리 지정해줘야 하며, 이는 결과에 큰 영향을 끼친다고 합니다.
     * LSTM 네트워크는 window 사이즈를 지정해 줄 필요가 없으며, ‘memory cells’를 통해 vanishing gradient 문제를 해결하였다고 설명하고 있습니다.
@@ -78,7 +79,7 @@
     * Stacked 된 LSTM 네트워크는 좋은 성능을 보여주었고, RNN보다 LSTM 네트워크가 성능이 더 좋았다고 밝히고 있습니다.          
     ![Alt text](https://github.com/jigeria/AnomalyDetection/blob/master/picture/paper_6.PNG "모델 성능지표")
 
-7. Anomaly Detection with Generative Adversarial Networks for Multivariate Time Series [7]
+7. Anomaly Detection with Generative Adversarial Networks for Multivariate Time Series [7](https://arxiv.org/pdf/1709.05342.pdf)
 
     * 오늘날 CPS 시스템은 크고, 복잡하며, 사이버 공격의 목표가 되는 network sensor와 actuators가 부착되어 있다고 눈문에서는 설명합니다.
     * 기존의 이상감지 기법 들은 역동적이고, 복잡한 것 들을 감지할 수 없다는 단점을 논문에서는 밝힙니다.
@@ -89,7 +90,7 @@
     * Secure Water Treatment Testbed(SWaT) 데이터 셋을 사용해 테스트를 하였으며, 다른 비지도학습 이상감지 기법보다 성능이 좋았다고 말하고 있습니다.
     ![Alt text](https://github.com/jigeria/AnomalyDetection/blob/master/picture/paper_7.png "모델 구조 및 출력")
 
-8. LSTM-based Encoder-Decoder for Multi-sensor Anomaly Detection [8]
+8. LSTM-based Encoder-Decoder for Multi-sensor Anomaly Detection [8](https://arxiv.org/pdf/1607.00148.pdf)
 
     * 엔진, 차량, 항공기 등과 같은 기계 장치에는 일반적으로 기계의 상태나 동작을 캡처하는 수많은 센서가 있습니다. 그러나 종종 센서에 포착 되지 않는 외부요인, 변수들이 많으며, 이는 본질적으로 예측할 수 없는 시계열 데이터로 이어집니다. EX) 수동 제어, 모니터링 되지 않는 환경과 조건 등
     * 이러한 상황에서 수학에 의존하는 모델을 사용하는 것은 어렵다고 논문에서는 기존 이상감지 방식의 한게점을 말하고 있습니다.
@@ -97,7 +98,7 @@
     * EncDec-AD를 통하여 예측가능한, 예측불가능한, 주기적인, 불규칙적인, 준 주기적인 시계열데이터에서 이상징후를 할 수 있으며, 짧은 주기(30)의 시계열과 굉장히 긴 주기의 시계열(500)에서도 이상징후를 감지할 수 있다고 말하고 있습니다.
     * 논문에서는 전력수요, 우주 왕복선, ECG, 그리고 2개의 real-world 엔진 데이터 셋을 이용해 실험을 진행하였다고 합니다.
 
-9. Time Series Anomaly Detection [9]
+9. Time Series Anomaly Detection [9](https://arxiv.org/ftp/arxiv/papers/1708/1708.03665.pdf)
 
     * 구글의 실시간 트래픽 데이터에서 이상을 감지하기 위해서 연구를 시작하였다고 논문에서는 밝힙니다.
     * 데이터는 노이즈가 있고, 트래픽 패턴이 있는 주기적인 데이터에서 이상을 감지하기위해 머신러닝 기법과 통계적 기법으로 접근하였다고 합니다.
@@ -110,7 +111,7 @@
     * 통계적인 베이스가 있는 이상감지 규칙과, 사용자가 반복적으로 false positive를 수동으로 제거할 수 있도록 쉽게 수정할 수 있는 규칙은 이상징후를 탐지할 수 있는 매우 강력한 방법이라고 말하고 있습니다.
     ![Alt text](https://github.com/jigeria/AnomalyDetection/blob/master/picture/paper_9.png "모델 성능 지표 비교")
 
-10. Detecting Spacecraft Anomalies Using Nonparametric Dynamic Thresholding [10]
+10. Detecting Spacecraft Anomalies Using Nonparametric Dynamic Thresholding [10](https://arxiv.org/pdf/1802.04431.pdf)
 
     * 본 논문은 NASA에서 작성하였습니다. 
 
@@ -183,7 +184,7 @@
     * 아래는 테스트 데이터 셋을 이용한 모델 성능평가 담긴 사진입니다.
     ![Alt text](https://github.com/jigeria/AnomalyDetection/blob/master/picture/paper_10_7.png "Model Test")
 
-11. A Data-Driven Health Monitoring Method for Satellite Housekeeping Data Based on Probabilistic Clustering and Dimensionality Reduction [11]
+11. A Data-Driven Health Monitoring Method for Satellite Housekeeping Data Based on Probabilistic Clustering and Dimensionality Reduction [11](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7859276)
 
     ![Alt text](https://github.com/jigeria/AnomalyDetection/blob/master/picture/paper_11_1.png "Paper")
     * 'A Data-Driven Health Monitoring Method for Satellite Housekeeping Data Based on Probabilistic Clustering and Dimensionality Reduction' 논문입니다.
@@ -313,7 +314,7 @@
     * [7] Anomaly Detection with Generative Adversarial Networks for Multivariate Time Series -  
     https://arxiv.org/pdf/1709.05342.pdf
 
-    * [8] LSTM-based Encoder-Decoder for Multi-sensor Anomaly Detection 
+    * [8] LSTM-based Encoder-Decoder for Multi-sensor Anomaly Detection  
     https://arxiv.org/pdf/1607.00148.pdf 
 
     * [9] Time Series Anomaly Detection 
