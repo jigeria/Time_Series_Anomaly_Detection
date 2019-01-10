@@ -296,14 +296,20 @@
         * 논문에서는 수식적으로 복잡하게 작성되어있습니다. __이현호__ 연구원께서 관련 부분을 이해하는데 많은 도움을 주셨습니다.
 
         * Anomaly Score는 내가 뽑은 데이터 샘플의 희귀한 정도를 수치화시켜 나타낸 것 입니다.(희귀할수록 score는 높아지게 됩니다.)  
-        ![Alt text](./picture/paper_11_5.png "Anomaly Score")
+        ![Alt text](./picture/paper_11_5.PNG "Anomaly Score")
 
-        * Anomaly Score는 Gaussian Mixture Model를 사용하였습니다. Guassain Mixture Model의 대한 설명을 잠깐 드리겠습니다.  
-          
-        Gaussian Mixture Model은 데이터가 K개의 정규분포로부터 생성되었다고 보는 모델입니다.  
+        * Anomaly Score는 Gaussian Mixture Model를 사용하였습니다. Guassain Mixture Model의 대한 설명을 잠깐 드리겠습니다.
+        GMM(Gaussian Mixture Model)은 데이터가 K개의 정규분포로부터 생성되었다고 보는 모델입니다.  
+         
         ![Alt text](./picture/paper_11_6.png "Anomaly Score")  
         위 사진의 분포를 더 자세히보면 아래 사진과 같은 3개의 정규분포로 되어있는 걸 볼 수 있습니다.  
         ![Alt text](./picture/paper_11_7.png "Anomaly Score")  
+        위 사진과 같이 GMM은 K개의 정규분포로 데이터가 생성되었다고 보는 모델입니다.  
+          
+        아래사진처럼 2차원과 3차원에서도 가능합니다.  
+        ![Alt text](./picture/paper_11_7.png "Anomaly Score")  
+
+
 
 
 
