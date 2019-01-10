@@ -1,4 +1,4 @@
-# Time Series Anomaly Detection - Anomaly Detection Paper Summary
+# Time Series Anomaly Detection - Paper Summary
 
 * 작성자 : 박상민, 이현호 (주)인스페이스 미래기술실 연구원
 * 일시 : 2018.01.07
@@ -298,7 +298,7 @@
         * Anomaly Score는 내가 뽑은 데이터 샘플의 희귀한 정도를 수치화시켜 나타낸 것 입니다.(희귀할수록 score는 높아지게 됩니다.)  
         ![Alt text](./picture/paper_11_5.PNG "Anomaly Score")
 
-        * Anomaly Score는 Gaussian Mixture Model를 사용하였습니다. 간단하게 방식에 대해 설명드리기 전에 Guassain Mixture Model의 대한 설명을 잠깐 드리겠습니다.
+        * Anomaly Score는 Gaussian Mixture Model를 사용하였습니다. 간단하게 방식에 대해 설명드리기 전에 Guassain Mixture Model의 대한 설명을 잠깐 드리고, anomaly score를 산출하는 방법에 대해 간단하게 설명하겠습니다.
             GMM(Gaussian Mixture Model)은 데이터가 K개의 정규분포로부터 생성되었다고 보는 모델입니다.  
             
             ![Alt text](./picture/paper_11_6.png)  
@@ -309,11 +309,11 @@
             아래사진처럼 2차원과 3차원에서도 가능합니다.  
             ![Alt text](./picture/paper_11_8.png)    
 
-            아래와 같이 C1 ~ C6까지 총 6개의 클러스터링 된 굉장히 이상적인 분포가 있다고 생각을 해보겠습니다.  
+            아래와 같이 C1 ~ C6까지 총 6개의 클러스터링 된 굉장히 이상적인 데이터 분포가 있다고 생각을 해보겠습니다.  
             ![Alt text](./picture/paper_11_12.png)  
 
-            각 클러스터의 데이터 샘플들의 개수는 다음과 같습니다.
-            ![Alt text](./picture/paper_11_13.png)  
+            각 클러스터의 데이터 샘플들의 개수는 다음과 같습니다.  
+                ![Alt text](./picture/paper_11_13.png)  \
 
             각 클러스터들의 데이터 샘플 개수가 위의 사진과 같다면, 전체 데이터 중 하나의 데이터를 뽑았을 때 그 데이터의 클러스터를 뽑을 확률을 구해야합니다.  
             ![Alt text](./picture/paper_11_14.png)  
