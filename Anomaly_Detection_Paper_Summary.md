@@ -1,6 +1,6 @@
 # Time Series Anomaly Detection - Anomaly Detection Paper Summary
 
-* 작성자 : 박상민 - (주)인스페이스 미래기술실 연구원 
+* 작성자 : 박상민, 이현호 (주)인스페이스 미래기술실 연구원
 * 일시 : 2018.01.07
 
 * 이 글은 제가 2018년 8월부터 12월까지 약 4개월간 이상감지(Anomaly Detection)를 연구하게 되면서 공부했던 것, 알아낸 것, 찾아봤던 자료, 구현체, 결과물 등을 정리해서 공유하는 글 입니다. 
@@ -291,6 +291,23 @@
             * 범위를 변환하는 작업 등을 통해서 모든 Telemetry 데이터를 정규화해서 균일하게 사용할 수 있도록 하였다.
             * Categorical(범주형) 변수의 값들은 각 변수 빈도를 내림차순으로 1씩 증가하는 값으로 대체한다.
                 * Ex)’DIS’ / ‘ENA’ Telemetry가 각각 0.8, 0.2의 확률이라면 DIS는 1이고, ENA는 0이다.
+
+    * 논문에서는 Anomaly Score를 산출하는 방법의 대해서도 작성하였습니다. Anomlay Score를 모니터링 담당자에게 중요한 지표가 될 것이라고 하였습니다.
+        * 논문에서는 수식적으로 복잡하게 작성되어있습니다. __이현호__ 연구원께서 관련 부분을 이해하는데 많은 도움을 주셨습니다.
+
+        * Anomaly Score는 내가 뽑은 데이터 샘플의 희귀한 정도를 수치화시켜 나타낸 것 입니다.(희귀할수록 score는 높아지게 됩니다.)  
+        ![Alt text](./picture/paper_11_5.png "Anomaly Score")
+
+        * Anomaly Score는 Gaussian Mixture Model를 사용하였습니다. Guassain Mixture Model의 대한 설명을 잠깐 드리겠습니다.  
+        Gaussian Mixture Model은 데이터가 K개의 정규분포로부터 생성되었다고 보는 모델입니다.  
+        ![Alt text](./picture/paper_11_6.png "Anomaly Score")  
+        위 사진의 분포를 더 자세히보면 아래 사진과 같은 3개의 정규분포로 되어있는 걸 볼 수 있습니다.  
+        ![Alt text](./picture/paper_11_7.png "Anomaly Score")  
+
+
+
+
+
 
 * 참고자료
     * [1] Applications of Deep Learning Neural Networks to Satellite Telemetry Monitoring  
