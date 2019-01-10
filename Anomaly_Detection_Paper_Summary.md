@@ -299,6 +299,7 @@
         ![Alt text](./picture/paper_11_5.png "Anomaly Score")
 
         * Anomaly Score는 Gaussian Mixture Model를 사용하였습니다. Guassain Mixture Model의 대한 설명을 잠깐 드리겠습니다.  
+          
         Gaussian Mixture Model은 데이터가 K개의 정규분포로부터 생성되었다고 보는 모델입니다.  
         ![Alt text](./picture/paper_11_6.png "Anomaly Score")  
         위 사진의 분포를 더 자세히보면 아래 사진과 같은 3개의 정규분포로 되어있는 걸 볼 수 있습니다.  
