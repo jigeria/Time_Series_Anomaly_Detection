@@ -1,7 +1,6 @@
 # Time Series Anomaly Detection - with DeepLearning
 
 * 작성자 : 박상민 - (주)인스페이스 미래기술실 연구원 
-* 일시 : 2018.01.10
 
 * 이 글은 제가 2018년 8월부터 12월까지 약 4개월간 이상감지(Anomaly Detection)를 연구하게 되면서 공부했던 것, 알아낸 것, 찾아봤던 자료, 구현체, 결과물 등을 정리해서 공유하는 글 입니다. 주관적인 내용이 포함되어 있으니 이해해주시기 바랍니다. 항공우주분야의 이상감지를 연구해왔기 때문에 글의 내용도 도메인에 밀접한 내용이 있으니 참고하시면 좋을 것 같습니다.
 아직 지식이 많이 부족하고, 경험이 부족하기 때문에, 고칠 것도 많을 것 같습니다. 고처야 할 부분은 언제든지 연락주시면 감사하겠습니다 :)
@@ -70,9 +69,8 @@
 
     * 클러스터링 방식은 특성이 비슷한 데이터들을 군집화하는 비지도학습 방식의 머신러닝 기법입니다. 키가 비슷한 사람들을 군집해주거나, 가까운 지역에 있는 사람들을 묶어주는 것 등에 사용될 수 있습니다. 클러스터링 알고리즘은 다양합니다. K-means, DBSCAN, 계층적 군집화(Hiarchical Clustering)등이 있으며, 각각 알고리즘에 따라 성능이나 속도에 차이가 있습니다.  
 
-    * 아래 사진은 scikit-learn에 나와있는 각 클러스터링 알고리즘의 성능을 비교하여 보여주고있습니다. 대부분의 클러스터링 알고리즘은 sklearn에서 제공해주고 있습니다. 참고하시면 좋을 것 같습니다.
-    ![Alt text](./picture/summary/clustering_1.png "비정상 데이터 이해") [출처](https://scikit-learn.org/stable/auto_examples/cluster/plot_cluster_comparison.html#sphx-glr-auto-examples-cluster-plot-cluster-comparison-py)
- 
+    * 아래 사진은 scikit-learn에 나와있는 각 클러스터링 알고리즘의 성능을 비교하여 보여주고있습니다. 대부분의 클러스터링 알고리즘은 sklearn에서 제공해주고 있습니다. 참고하시면 좋을 것 같습니다. [출처](https://scikit-learn.org/stable/auto_examples/cluster/plot_cluster_comparison.html#sphx-glr-auto-examples-cluster-plot-cluster-comparison-py)  
+    ![Alt text](./picture/summary/clustering_1.png "비정상 데이터 이해") 
 
     * K-means
 
