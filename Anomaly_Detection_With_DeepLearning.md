@@ -70,7 +70,7 @@
     * 클러스터링 방식은 특성이 비슷한 데이터들을 군집화하는 비지도학습 방식의 머신러닝 기법입니다. 키가 비슷한 사람들을 군집해주거나, 가까운 지역에 있는 사람들을 묶어주는 것 등에 사용될 수 있습니다. 클러스터링 알고리즘은 다양합니다. K-means, DBSCAN, 계층적 군집화(Hiarchical Clustering)등이 있으며, 각각 알고리즘에 따라 성능이나 속도에 차이가 있습니다.  
 
     * 아래 사진은 scikit-learn에 나와있는 각 클러스터링 알고리즘의 성능을 비교하여 보여주고있습니다. 대부분의 클러스터링 알고리즘은 sklearn에서 제공해주고 있습니다. 참고하시면 좋을 것 같습니다. [출처](https://scikit-learn.org/stable/auto_examples/cluster/plot_cluster_comparison.html#sphx-glr-auto-examples-cluster-plot-cluster-comparison-py)  
-    ![Alt text](./picture/summary/clustering_1.png "비정상 데이터 이해") 
+    ![Alt text](./picture/summary/clustering_1.png "클러스터링 성능 비교") 
 
     * __K-means__
 
@@ -84,8 +84,12 @@
             * 경계점 (boder point)
             * noise point (outlier)
 
-        * 아래 사진에서 점 p가있다고 할 때, 점 p에서부터 거리 e내에 점이 m개있으면 하나의 군집이 됩니다. m은 4이므로, 점 p에서부터 e거리내에 점들이 4개이상 있으므로 군집이 성립됩니다. [출처](http://bcho.tistory.com/1205)  
-        ![Alt text](./picture/summary/clustering_1.png "비정상 데이터 이해") 
+        * 아래 그림과 같이 점 p가있다고 할 때, 점 p에서부터 거리 e내에 점이 m개있으면 하나의 군집이 됩니다. m은 4이므로, 점 p에서부터 e거리내에 점들이 4개이상 있으므로 군집이 성립됩니다. 파란점 p는 중심점(core point)가 됩니다. [출처](http://bcho.tistory.com/1205)  
+        ![Alt text](./picture/summary/dbscan_1.png "DBSCAN 원리_1") 
+
+        * 아래 사진에서는 거리 e내에 점이 3개이기 때문에 중심점은은 되지 못하지만, 중심점의 군집에는 속하기 때문에 점 p2는 경계점(border point)입니다.  
+        ![Alt text](./picture/summary/dbscan_2.png "DBSCAN 원리_2") 
+
 
         
     * 그 외
