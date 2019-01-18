@@ -70,8 +70,8 @@
 
     * 클러스터링 방식은 특성이 비슷한 데이터들을 군집화하는 비지도학습 방식의 머신러닝 기법입니다. 키가 비슷한 사람들을 군집해주거나, 가까운 지역에 있는 사람들을 묶어주는 것 등에 사용될 수 있습니다. 클러스터링 알고리즘은 다양합니다. K-means, DBSCAN, 계층적 군집화(Hiarchical Clustering)등이 있으며, 각각 알고리즘에 따라 성능이나 속도에 차이가 있습니다.  
 
-    * 아래 사진을 scikit-learn에 나와있는 각 크러스터링의 결과비교 사진입니다. 대부분의 클러스터링 알고리즘은 sklearn에서 제공해주고 있습니다. 참고하시면 좋을 것 같습니다.
-    ![Alt text](./picture/summary/clustering_1.png "비정상 데이터 이해") [출처] (https://scikit-learn.org/stable/auto_examples/cluster/plot_cluster_comparison.html#sphx-glr-auto-examples-cluster-plot-cluster-comparison-py)
+    * 아래 사진은 scikit-learn에 나와있는 각 클러스터링 알고리즘의 성능을 비교하여 보여주고있습니다. 대부분의 클러스터링 알고리즘은 sklearn에서 제공해주고 있습니다. 참고하시면 좋을 것 같습니다.
+    ![Alt text](./picture/summary/clustering_1.png "비정상 데이터 이해") [출처](https://scikit-learn.org/stable/auto_examples/cluster/plot_cluster_comparison.html#sphx-glr-auto-examples-cluster-plot-cluster-comparison-py)
  
 
     * K-means
