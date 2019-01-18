@@ -84,8 +84,10 @@
             * 경계점 (boder point)
             * noise point (outlier)
 
-        * 
+        * 아래 사진에서 점 p가있다고 할 때, 점 p에서부터 거리 e내에 점이 m개있으면 하나의 군집이 됩니다. m은 4이므로, 점 p에서부터 e거리내에 점들이 4개이상 있으므로 군집이 성립됩니다. [출처](http://bcho.tistory.com/1205)  
+        ![Alt text](./picture/summary/clustering_1.png "비정상 데이터 이해") 
 
+        
     * 그 외
 
 * __LSTM-Autoencoder 이상감지 모델__
