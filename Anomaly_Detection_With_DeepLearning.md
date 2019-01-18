@@ -72,9 +72,9 @@
     * 아래 사진은 scikit-learn에 나와있는 각 클러스터링 알고리즘의 성능을 비교하여 보여주고있습니다. 대부분의 클러스터링 알고리즘은 sklearn에서 제공해주고 있습니다. 참고하시면 좋을 것 같습니다. [출처](https://scikit-learn.org/stable/auto_examples/cluster/plot_cluster_comparison.html#sphx-glr-auto-examples-cluster-plot-cluster-comparison-py)  
     ![Alt text](./picture/summary/clustering_1.png "비정상 데이터 이해") 
 
-    * K-means
+    * __K-means__
 
-    * DBSCAN(ensity-based spatial clustering of applications with noise)
+    * __DBSCAN(ensity-based spatial clustering of applications with noise)__
         * DBSCAN은 클러스터링 알고리즘 중 하나입니다. 밀도 방식의 클러스터링을 사용하합니다. K-means 클러스터링의 경우 거리 기반의 클러스터링 방식이빈다. 밀도 기반의 클러스터링은 데이터의 밀도가 높은 부분을 클러스터링 하는 방식입니다. DBSCAN의 원리에 대해서 설명하도록 하겠습니다. 조대협님의 블로그에서 사진과 설명을 많이 참고했습니다. [출처](http://bcho.tistory.com/1205)  
 
         * 중요한 용어들입니다. 

@@ -14,4 +14,4 @@
 
 # Contact 
 
-* Email : psm@inspace.re.kr
+* Email : psm@inspace.re.kr / jigeria@naver.com
