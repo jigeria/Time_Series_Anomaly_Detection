@@ -84,11 +84,17 @@
             * 경계점 (boder point)
             * noise point (outlier)
 
-        * 아래 그림과 같이 점 p가있다고 할 때, 점 p에서부터 거리 e내에 점이 m개있으면 하나의 군집이 됩니다. m은 4이므로, 점 p에서부터 e거리내에 점들이 4개이상 있으므로 군집이 성립됩니다. 파란점 p는 중심점(core point)가 됩니다. [출처](http://bcho.tistory.com/1205)  
+        * 아래 그림과 같이 점 p가있다고 할 때, 점 p에서부터 거리 e내에 점이 m개있으면 하나의 군집이 됩니다. m은 4이므로, 점 p에서부터 반경내에 점들이 4개이상 있으므로 군집이 성립됩니다. 파란점 p는 중심점(core point)가 됩니다. [출처](http://bcho.tistory.com/1205)  
         ![Alt text](./picture/summary/dbscan_1.png "DBSCAN 원리_1") 
 
-        * 아래 사진에서는 거리 e내에 점이 3개이기 때문에 중심점은은 되지 못하지만, 중심점의 군집에는 속하기 때문에 점 p2는 경계점(border point)입니다.  
+        * 아래 그림에서 반경내에 점이 3개이기 때문에 core point은 되지 못하지만, core point의 군집에는 속하기 때문에 점 p2는 경계점(border point)이 됩니다.  
         ![Alt text](./picture/summary/dbscan_2.png "DBSCAN 원리_2") 
+
+        * 아래 그림에서 점 p3는 반경내에 점 4개를 가지고 있기 때문에 군집이 형성되고, 점 p3는 core point가 됩니다.  
+        ![Alt text](./picture/summary/dbscan_3.png "DBSCAN 원리_3") 
+
+        * 하지만, 점 p3를 중심으로 하는 반경내에 다른 core point p가 포함되어 있습니다. 이런 경우 core point p와 p3는 연결되어 있다고 보고, 하나의 군집으로 묶이게 됩니다.  
+        ![Alt text](./picture/summary/dbscan_4.png "DBSCAN 원리_4") 
 
 
         
