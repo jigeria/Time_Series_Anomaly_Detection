@@ -96,6 +96,14 @@
         * 하지만, 점 p3를 중심으로 하는 반경내에 다른 core point p가 포함되어 있습니다. 이런 경우 core point p와 p3는 연결되어 있다고 보고, 하나의 군집으로 묶이게 됩니다.  
         ![Alt text](./picture/summary/dbscan_4.png "DBSCAN 원리_4") 
 
+        * 점 P4는 반경내에 점이 4개가 없으므로, 즉 어느 군집에도 속하지 않으므로 outlier가 됩니다. Outlier는 noise point라고 합니다
+        ![Alt text](./picture/summary/dbscan_5.png "DBSCAN 원리_5") 
+
+        * 위 내용을 모두 정리하면 아래의 그림이 될 것 같습니다. 
+        ![Alt text](./picture/summary/dbscan_6.png "DBSCAN 원리_6") 
+
+        * 요악하자면, 점을 중심으로 epsilon 반경내에 m이상수의 점이 있으면 그 점을 중심으로 군집을 하게 됩니다. Core point가 서로 다른 core point의 군집의 일부가 되며느 두 군집은 하나의 군집으로 연결됩니다. 군집에는 속하지만 스스로 core point가 안되는 점을 border point라고 합니다. 어느 군집에도 속하지 않은 점은 outlier 즉, noise point라고 합니다.
+
 
         
     * 그 외
