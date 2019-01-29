@@ -110,7 +110,10 @@
     * 그 외
 
     * __LSTM-Autoencoder 이상감지 모델__
-        * RNN의 장점 중 하나는 이전의 정보를 현재의 문제 해결에 활용할 수 있다는 것 입니다. 비디오에서 바로 전의 프레임이 현재 프레임을 해석하는데 도움을 줄 수 있습니다. 하지만 RNN은 길이가 긴 시퀀스를 처리하기 어렵고, Vanishing Gradient 문제를 가지고 있습니다. Vanishing Gradient Problem은 인공신경망이 기울기 값이 사라지는 현상입니다. 인공신경망은 기울기 값을 기반으로 역전파를 통해 학습합니다. Gradient 즉, 변화량이 굉장히 작다면 네트워크를 효과적으로 학습시키지 못할 것이고, 수렴해버리는 문제가 생기기 됩니다. 이를 해결하기 위해 가중치를 잘 초기화 하는 방법, ReLU activation 함수를 사용하는 방법 등이 있습니다. 좀 더 확실한 해결책은 Long Short_Term Memory(LSTM)이나 Gated Recurrent Unit(GRU)구조를 사용하는 방법입니다. LSTM과 GRU모두 vanishing gradient 문제를 잘 해결하기 위해 설계되었고, 킨 시퀀스를 처리할 수 있다는 것을 보여주었습니다. 
+        * RNN의 장점 중 하나는 이전의 정보를 현재의 문제 해결에 활용할 수 있다는 것 입니다. 비디오에서 바로 전의 프레임이 현재 프레임을 해석하는데 도움을 줄 수 있습니다. 하지만 RNN은 길이가 긴 시퀀스를 처리하기 어렵고, Vanishing Gradient 문제를 가지고 있습니다. Vanishing Gradient Problem은 인공신경망이 기울기 값이 사라지는 현상입니다. 인공신경망은 기울기 값을 기반으로 역전파를 통해 학습합니다. Gradient 즉, 변화량이 굉장히 작다면 네트워크를 효과적으로 학습시키지 못할 것입니다. Gradient가 0에 수렴할수록, 네트워크의 학습속도는 굉장히 느려질 것이고, local minimum에 도착할 것 입니다. 이를 해결하기 위해 가중치를 잘 초기화 하는 방법, ReLU activation 함수를 사용하는 방법 등이 있습니다.   
+        ![Alt text](./picture/summary/ReLU.png "ReLU Function") 
+
+        좀 더 확실한 해결책은 Long Short_Term Memory(LSTM)이나 Gated Recurrent Unit(GRU)구조를 사용하는 방법입니다. LSTM과 GRU모두 vanishing gradient 문제를 해결하기 위해 설계되었고, 킨 시퀀스를 처리할 수 있다는 것을 보여주었습니다. 
 
         
 
