@@ -42,8 +42,13 @@
 
     * 지도학습이 안된다면, 비지도학습(Unsupervised learning), 반지도학습(Semi-supervised learning)을 사용해야 합니다. 분류문제로 접근해서 문제를 해결하고자 한다면 가장 쉽겠지만, 현실적으로는 불가능합니다. 그렇기 때문에 라벨링이 필요없는(라벨링이 필요없다의 기준은 정상과 비정상 데이터가 명확히 구분된 상태를 말합니다.), 아주 소량의 데이터가 라벨링되어있는 상태가 대부분이고, 이는 지도학습이 아닌 비지도학습이나 반지도학습으로 접근하여야 합니다.
 
+    * 이상감지에 적용할 수 있는 머신러닝/딥러닝 기법들을 정리해보았습니다.  
+    ![Alt text](./picture/summary/Anomaly_Detection_Techniques_map.png "Anomaly Detection Techniques Map")  
+
+    위 기법들 외에 더 많은 기법들이 있을 것 같고, 분류하기 애매한 부분들도 있을 것 같습니다. 계속해서 수정 및 보완할 예정입니다. 피드백 주시면 반영하도록 하겠습니다.  
+
 * __이상감지와 데이터__
-    * 위에서도 말씀드렸지만, 이상감지분야를 연구하다보면 가장 큰 문제는 데이터 입니다. 특히 시계열 데이터에서 '시간'적인 특성을 잘 고려해야 합니다. 지금까지의 OOL기법, 클러스터링 등은 시간적인 특성을 고려하지 않은 기법들입니다. 하지만 현실에서는 시계열 데이터가 대부분이고, 시간적인 특성을 가지고 있습니다. 위성에서 원격으로 보내주는 Telemetry 데이터 또한 시계열 데이터이고, 패턴이 있습니다. 
+    * 위에서도 말씀드렸지만, 이상감지분야를 연구하다보면 가장 큰 문제는 데이터 입니다. 특히 시계열 데이터에서 '시간'적인 특성을 잘 고려해야 합니다. 기존의 OOL기법, 클러스터링 등은 시간적인 특성을 고려하지 않은 기법들입니다. 하지만 현실에서는 시계열 데이터가 대부분이고, 시간적인 특성을 가지고 있습니다. 위성에서 원격으로 보내주는 Telemetry 데이터 또한 시계열 데이터이고, 패턴이 있습니다. 
     
     * 정상과 이상을 정의하는 것도 중요합니다. 무엇이 정상이고, 무엇이 이상인지 도메인 전문가는 알고 있어야 합니다. 여기서 novelty와 anomaly의 차이를 알고가시면 좋을 듯 합니다. novelty의 뜻은 새로운이라는 뜻 입니다. 즉 novelty detection은 anomaly(이상)를 찾는것이 아니라, 정상과는 다른 새로운 패턴 또는 형태의 데이터를 찾는 것 입니다. 새로운 패턴, 형태의 데이터에는 어쩌면 anomaly(이상)가 있을수도 있습니다. 하지만 무조건 이상 데이터라고는 할 수는 없겠죠. 이상이라고는 할 수 없지만, 정상데이터와는 다른 새로운 데이터라고 생각하시면 될 것 같습니다. 범위로보자면 novelty가 더 큰 범위이겠네요.  
     ![Alt text](./picture/summary/summary_2.png "Normal vs Novelty vs Anomaly")  
@@ -85,22 +90,27 @@
             * noise point (outlier)
 
         * 아래 그림과 같이 점 p가있다고 할 때, 점 p에서부터 거리 e내에 점이 m개있으면 하나의 군집이 됩니다. m은 4이므로, 점 p에서부터 반경내에 점들이 4개이상 있으므로 군집이 성립됩니다. 파란점 p는 중심점(core point)가 됩니다. [출처](http://bcho.tistory.com/1205)  
-        ![Alt text](./picture/summary/dbscan_1.png "DBSCAN 원리_1") 
+        <img src="./picture/summary/dbscan_1.png" width="80%">  
 
         * 아래 그림에서 반경내에 점이 3개이기 때문에 core point은 되지 못하지만, core point의 군집에는 속하기 때문에 점 p2는 경계점(border point)이 됩니다.  
-        ![Alt text](./picture/summary/dbscan_2.png "DBSCAN 원리_2") 
+        [출처](http://bcho.tistory.com/1205)   
+        <img src="./picture/summary/dbscan_2.png" width="80%">  
 
         * 아래 그림에서 점 p3는 반경내에 점 4개를 가지고 있기 때문에 군집이 형성되고, 점 p3는 core point가 됩니다.  
-        ![Alt text](./picture/summary/dbscan_3.png "DBSCAN 원리_3") 
+        [출처](http://bcho.tistory.com/1205)   
+        <img src="./picture/summary/dbscan_3.png" width="80%">  
 
         * 하지만, 점 p3를 중심으로 하는 반경내에 다른 core point p가 포함되어 있습니다. 이런 경우 core point p와 p3는 연결되어 있다고 보고, 하나의 군집으로 묶이게 됩니다.  
-        ![Alt text](./picture/summary/dbscan_4.png "DBSCAN 원리_4") 
+        [출처](http://bcho.tistory.com/1205)     
+        <img src="./picture/summary/dbscan_4.png" width="80%">  
 
-        * 점 P4는 반경내에 점이 4개가 없으므로, 즉 어느 군집에도 속하지 않으므로 outlier가 됩니다. Outlier는 noise point라고 합니다
-        ![Alt text](./picture/summary/dbscan_5.png "DBSCAN 원리_5") 
+        * 점 P4는 반경내에 점이 4개가 없으므로, 즉 어느 군집에도 속하지 않으므로 outlier가 됩니다. Outlier는 noise point라고 합니다.  
+        [출처](http://bcho.tistory.com/1205) 
+        <img src="./picture/summary/dbscan_5.png" width="80%">  
 
-        * 위 내용을 모두 정리하면 아래의 그림이 될 것 같습니다. 
-        ![Alt text](./picture/summary/dbscan_6.png "DBSCAN 원리_6") 
+        * 위 내용을 모두 정리하면 아래의 그림이 될 것 같습니다.  
+        [출처](http://bcho.tistory.com/1205)  
+        <img src="./picture/summary/dbscan_6.png" width="80%">   
 
         * 요악하자면, 점을 중심으로 epsilon 반경내에 m이상수의 점이 있으면 그 점을 중심으로 군집을 하게 됩니다. Core point가 서로 다른 core point의 군집의 일부가 되며느 두 군집은 하나의 군집으로 연결됩니다. 군집에는 속하지만 스스로 core point가 안되는 점을 border point라고 합니다. 어느 군집에도 속하지 않은 점은 outlier 즉, noise point라고 합니다.
 
@@ -109,12 +119,13 @@
 
     * 그 외
 
-    * __LSTM-Autoencoder 이상감지 모델__
-        * RNN의 장점 중 하나는 이전의 정보를 현재의 문제 해결에 활용할 수 있다는 것 입니다. 비디오에서 바로 전의 프레임이 현재 프레임을 해석하는데 도움을 줄 수 있습니다. 하지만 RNN은 길이가 긴 시퀀스를 처리하기 어렵고, Vanishing Gradient 문제를 가지고 있습니다. Vanishing Gradient Problem은 인공신경망이 기울기 값이 사라지는 현상입니다. 인공신경망은 기울기 값을 기반으로 역전파를 통해 학습합니다. Gradient 즉, 변화량이 굉장히 작다면 네트워크를 효과적으로 학습시키지 못할 것입니다. Gradient가 0에 수렴할수록, 네트워크의 학습속도는 굉장히 느려질 것이고, local minimum에 도착할 것 입니다. 이를 해결하기 위해 가중치를 잘 초기화 하는 방법, ReLU activation 함수를 사용하는 방법 등이 있습니다.   
-        ![Alt text](./picture/summary/ReLU.png "ReLU") [출처](https://medium.com/tinymind/a-practical-guide-to-relu-b83ca804f1f7) 
-
-        좀 더 확실한 해결책은 Long Short_Term Memory(LSTM)이나 Gated Recurrent Unit(GRU)구조를 사용하는 방법입니다. LSTM과 GRU모두 vanishing gradient 문제를 해결하기 위해 설계되었고, 킨 시퀀스를 처리할 수 있다는 것을 보여주었습니다. 
-
+    * __LSTM-AutoEncoder 이상감지 모델__
+        * RNN의 장점 중 하나는 이전의 정보를 현재의 문제 해결에 활용할 수 있다는 것 입니다. 비디오에서 바로 전의 프레임이 현재 프레임을 해석하는데 도움을 줄 수 있습니다. 하지만 RNN은 길이가 긴 시퀀스를 처리하기 어렵고, Vanishing Gradient 문제를 가지고 있습니다. Vanishing Gradient Problem은 인공신경망이 기울기 값이 사라지는 현상입니다. 인공신경망은 기울기 값을 기반으로 역전파를 통해 학습합니다. Gradient 즉, 변화량이 굉장히 작다면 네트워크를 효과적으로 학습시키지 못할 것입니다. Gradient가 0에 수렴할수록, 네트워크의 학습속도는 굉장히 느려질 것이고, local minimum에 도착할 것 입니다. 이를 해결하기 위해 가중치를 잘 초기화 하는 방법, ReLU activation 함수를 사용하는 방법 등이 있습니다. [아래 그림 출처](https://medium.com/tinymind/a-practical-guide-to-relu-b83ca804f1f7)  
+        <img src="./picture/summary/ReLU.png" width="80%">  
         
+        좀 더 확실한 해결책은 Long Short-Term Memory(LSTM)또는 Gated Recurrent Unit(GRU)구조를 사용하는 방법입니다. LSTM과 GRU모두 vanishing gradient 문제를 해결하기 위해 설계되었고, 킨 시퀀스를 처리할 수 있다는 것을 보여주었습니다. 
 
+        * 지도학습 방식의 Neural Network는 데이터의 입력값과 목표값(target)이 모두 주어진 라벨링된 데이터를 모델 학습에 사용합니다. 반대로 비지도학습 방식은 데이터의 입력값만 주어진 상태로 모델을 학습합니다. Auto-Encoder Neural Network(AutoEncoder)는 비지도 학습 방식입니다. 
+
+    
     * __Anomaly Score__
