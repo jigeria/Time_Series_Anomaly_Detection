@@ -44,7 +44,7 @@
 
     * 이상감지에 적용할 수 있는 머신러닝/딥러닝 기법들을 정리해보았습니다.  
 
-        <img src="./picture/summary/Anomaly_Detection_Techniques_map.PNG" width="80%"> 
+        <img src="./picture/summary/Anomaly_Detection_Techniques_map.PNG"> 
 
     위 기법들 외에 더 많은 기법들이 있을 것 같고, 분류하기 애매한 부분들도 있을 것 같습니다. 계속해서 수정 및 보완할 예정입니다. 피드백 주시면 반영하도록 하겠습니다.  
 
@@ -54,7 +54,7 @@
     
     * 정상과 이상을 정의하는 것도 중요합니다. 무엇이 정상이고, 무엇이 이상인지 도메인 전문가는 알고 있어야 합니다. 여기서 novelty와 anomaly의 차이를 알고가시면 좋을 듯 합니다. novelty의 뜻은 새로운이라는 뜻 입니다. 즉 novelty detection은 anomaly(이상)를 찾는것이 아니라, 정상과는 다른 새로운 패턴 또는 형태의 데이터를 찾는 것 입니다. 새로운 패턴, 형태의 데이터에는 어쩌면 anomaly(이상)가 있을수도 있습니다. 하지만 무조건 이상 데이터라고는 할 수는 없겠죠. 이상이라고는 할 수 없지만, 정상데이터와는 다른 새로운 데이터라고 생각하시면 될 것 같습니다. 범위로보자면 novelty가 더 큰 범위이겠네요.  
 
-        <img src="./picture/summary/summary_2.png" width="80%">   
+        <img src="./picture/summary/summary_2.png">   
 
     위 사진을 보시면 더 수월하게 이해가 될 것 같습니다. 위와같이 과일이 있을 때, 보라색포도는 정상입니다. 보라색포도가 정상이라고 했을 때 위 그림에서 anomaly(보라색 포도와는 다른 과일)를 찾고자 합니다. 청포도와 파인애플은 novelty 데이터입니다. 보라색 포도(정상데이터)와는 다르니까요. 여기에서 청포도를 바라보는 사람에 따라 입장차가 있을 수 있습니다. 과일을 잘 모르는 사람이 봤을 때, 청포도가 anomaly 라고 생각할 수도 있습니다.(색이 다르기 때문에) 하지만 과일을 잘아는(과일상점 주인) 사람이 봤을 때는 청포도는 anomaly라고 단정하기 보다는 새로운 종류(novelty)의 포도라고 생각할 수도 있습니다.(색깔이 다를뿐 그 외에는 똑같기 때문에.. 등)
 
@@ -62,7 +62,7 @@
 
     * 비정상데이터의 이해도 필요합니다. [출처](https://brunch.co.kr/@zedoring/2)  
 
-        <img src="./picture/summary/summary_1.png" width="80%">  
+        <img src="./picture/summary/summary_1.png" width="500px">  
 
         > * Point anomaly : 오직 하나의 데이터에만 이상이 생긴 것 입니다. 데이터들의 그룹에서 떨어져있는 값 입니다. Point anomaly는 수월하게 찾을 수 있습니다. OOL, 클러스터링 등을 이용해서도 쉽게 찾을 수 있습니다.
         > * Collective anomaly : 복수의 데이터 포인터들에게서 이상이 생긴 것 입니다. 
