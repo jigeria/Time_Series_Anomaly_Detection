@@ -62,7 +62,7 @@
 
     * 비정상데이터의 이해도 필요합니다. [출처](https://brunch.co.kr/@zedoring/2)  
 
-        <img src="./picture/summary/summary_1.png" width="500px">  
+        <img src="./picture/summary/summary_1.png">  
 
         > * Point anomaly : 오직 하나의 데이터에만 이상이 생긴 것 입니다. 데이터들의 그룹에서 떨어져있는 값 입니다. Point anomaly는 수월하게 찾을 수 있습니다. OOL, 클러스터링 등을 이용해서도 쉽게 찾을 수 있습니다.
         > * Collective anomaly : 복수의 데이터 포인터들에게서 이상이 생긴 것 입니다. 
